@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Hello</title>
+</head>
+
+<body>
+    <!-- <div id="oi" onmouseenter="aumentar()" onmouseleave="diminuir()" >Pergunta</div> -->
+    <div>
+        <input onkeyup="Task1()" maxlength="1" id="N">
+        <input onkeyup="Task1()" maxlength="1" id="E">
+        <input onkeyup="Task1()" maxlength="1" id="Y">
+        <input onkeyup="Task1()" maxlength="1" id="M">
+        <input onkeyup="Task1()" maxlength="1" id="A">
+        <input onkeyup="Task1(1)" onkeydown="Task1()" maxlength="1" id="R">
+    </div>
+</body>
+
+</html>
+<script>
+    var list = []
+    function Task1(value) {
+        var nome = N.value + E.value + Y.value + M.value + A.value + R.value
+        nome = nome.toLowerCase()
+        console.log(nome.length)
+        if (value == 1) {
+            if (nome == "neymar") {
+                N.style.backgroundColor = "green"
+                E.style.backgroundColor = "green"
+                Y.style.backgroundColor = "green"
+                M.style.backgroundColor = "green"
+                A.style.backgroundColor = "green"
+                R.style.backgroundColor = "green"
+
+            } else if (nome.length < 6) {
+                N.style.backgroundColor = "white"
+                E.style.backgroundColor = "white"
+                Y.style.backgroundColor = "white"
+                M.style.backgroundColor = "white"
+                A.style.backgroundColor = "white"
+                R.style.backgroundColor = "white"
+            } else {
+                N.style.backgroundColor = "Red"
+                E.style.backgroundColor = "Red"
+                Y.style.backgroundColor = "Red"
+                M.style.backgroundColor = "Red"
+                A.style.backgroundColor = "Red"
+                R.style.backgroundColor = "Red"
+            }
+        }
+
+    }
+</script>
